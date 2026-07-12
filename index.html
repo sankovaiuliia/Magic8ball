@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic Oracle</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+      background: #111;
+      color: white;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    #answer {
+      margin-top: 40px;
+      font-size: 28px;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔮 Magic Oracle</h1>
+<p>Tap or click to receive your answer</p>
+
+<button onclick="getAnswer()">Ask</button>
+
+<div id="answer"></div>
+
+<script>
+const answers = [
+  "Yes",
+  "No",
+  "Maybe",
+  "Ask again later",
+  "Definitely",
+  "Unlikely",
+  "Signs point to yes",
+  "The future is unclear"
+];
+
+function getAnswer() {
+  const randomIndex = Math.floor(Math.random() * answers.length);
+  document.getElementById("answer").innerText = answers[randomIndex];
+}
+</script>
+
+</body>
+</html>
